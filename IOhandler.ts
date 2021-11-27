@@ -16,6 +16,8 @@ const unzip = async (inputPath:string, outputPath:string) => {
     return outputPath    
 } 
 
+
+
 const readDirectory = async (inputPath:string) => {
     const options = ABSOLUTE_PATHS + CASELESS_SORT;    
     const absolutePath =  await read(inputPath, ['*.png'], options );    
@@ -23,7 +25,6 @@ const readDirectory = async (inputPath:string) => {
     return {absolutePath,
             filesName}
 }
-
 
 
 

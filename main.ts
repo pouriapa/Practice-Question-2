@@ -13,13 +13,7 @@ const runGrayScale = async (input:string, output:string) => {
    await createOutputDirectory(grayScaledFilesPath);
    for( let i = 0; i < absolutePath.length; i++ ){
        await grayScale(absolutePath[i], output, filesName[i])
-   }
-     
-
-
-   
-   
-  
+   } 
 }
 
 runGrayScale(zipFilePath, grayScaledFilesPath);
