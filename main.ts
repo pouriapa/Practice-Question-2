@@ -12,7 +12,7 @@ const runGrayScale = async (input:string, output:string) => {
    const {absolutePath, filesName} = await readDirectory (pngFilePath);
    await createOutputDirectory(grayScaledFilesPath);
    for( let i = 0; i < absolutePath.length; i++ ){
-       await grayScale(absolutePath[i], output, filesName[i])
+       grayScale(absolutePath[i], output, filesName[i])
    } 
 }
 
