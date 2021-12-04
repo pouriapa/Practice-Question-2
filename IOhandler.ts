@@ -10,9 +10,7 @@ const unzip = async (inputPath:string, outputPath:string) => {
     await createReadStream(inputPath)
         .pipe(unzipper.Extract({ path: outputPath }))        
         .promise() 
-        .then( () => {
-            console.log('Extraction Operation Complete')
-        })       
+    console.log('Extraction Operation Complete');          
     return outputPath    
 } 
 
@@ -28,7 +26,7 @@ const readDirectory = async (inputPath:string) => {
 
 
 
-const grayScale = async (pathIn:string, pathOut:string, fileName:string) => {
+const grayScale = (pathIn:string, pathOut:string, fileName:string) => {
 
     createReadStream(pathIn)
     .pipe(
